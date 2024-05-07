@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey</title>
+    
+
+<script  src="https://code.jquery.com/jquery-3.4.1.js" 
+integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="  
+crossorigin="anonymous"></script>
+<script src="scriptss.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h2><b>Survey Form for Recreational Space</b></h2>
+    <form id="surveyForm">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required> <br>
+
+        <ol>
+            <li>What is your age?</li>
+            <input type="radio" name="age" value="Below 45"> Below 45 <br>
+            <input type="radio" name="age" value="45-60"> 45-60 <br>
+            <input type="radio" name="age" value="60-70"> 60-70 <br>
+            <input type="radio" name="age" value="71-80"> 71-80 <br>
+            <input type="radio" name="age" value="80 or above"> 80 or above <br>
+
+            <li>How often would you be interested in participating in recreational activities at the club?</li>
+            <input type="radio" name="interest" value="Daily"> Daily <br>
+            <input type="radio" name="interest" value="Weekly"> Weekly <br>
+            <input type="radio" name="interest" value="Monthly"> Monthly <br>
+            <input type="radio" name="interest" value="Occasionally"> Occasionally <br>
+            <input type="radio" name="interest" value="Not interested"> Not interested <br>
+
+            <li>What types of recreational activities would you like to see offered at the club? (Check all that apply)</li>
+            <input type="checkbox" name="activities" value="Exercise classes"> Exercise classes (e.g. yoga) <br>
+            <input type="checkbox" name="activities" value="Arts and crafts"> Arts and crafts <br>
+            <input type="checkbox" name="activities" value="Gardening"> Gardening <br>
+            <input type="checkbox" name="activities" value="Cooking classes"> Cooking classes <br>
+            <input type="checkbox" name="activities" value="Book clubs"> Book clubs <br>
+            <input type="checkbox" name="activities" value="Games"> Games (e.g. card games, board games) <br>
+            <input type="checkbox" name="activities" value="Music and dance"> Music and dance <br>
+            <input type="checkbox" name="activities" value="Educational workshops"> Educational workshops <br>
+            <input type="checkbox" name="activities" value="Outdoor activities"> Outdoor activities (e.g. walking groups, nature outings) <br>
+            <input type="checkbox" name="activities" value="Other"> Other (please specify) <br>
+            Other's: <br>
+            <input type="text" id="otherActivities">
+            <br>
+
+            <li>What time of day would you prefer activities to be scheduled? (Check all that apply)</li>
+            <input type="checkbox" name="timeOfDay" value="Morning"> Morning <br>
+            <input type="checkbox" name="timeOfDay" value="Afternoon"> Afternoon <br>
+            <input type="checkbox" name="timeOfDay" value="Evening"> Evening <br>
+
+            <li>How long would you prefer each recreational activity session to last?</li>
+            <input type="radio" name="sessionLength" value="Less than 1 hour"> Less than 1 hour <br>
+            <input type="radio" name="sessionLength" value="1-2 hours"> 1-2 hours <br>
+            <input type="radio" name="sessionLength" value="2-3 hours"> 2-3 hours <br>
+            <input type="radio" name="sessionLength" value="More than 3 hours"> More than 3 hours <br>
+        </ol>
+        <button onclick="SubForm()">Submit</button>
+    </form>
+</div>
+
+
+
+</body>
+</html>
