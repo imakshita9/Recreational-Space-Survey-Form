@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Survey</title>
-    
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
 
 <script  src="https://code.jquery.com/jquery-3.4.1.js" 
 integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="  
@@ -15,28 +16,46 @@ crossorigin="anonymous"></script>
 <body>
 
 <div class="container">
+    <div id="google_translate_element"></div>
+<script>
+    function googleTranslateElementInit(){
+        new google.translate.TranslateElement(
+            {pageLanguage:'en'},
+            'google_translate_element'
+        );
+    }
+</script>
     <h2><b>Survey Form for Recreational Space</b></h2>
     <form id="surveyForm">
-        <label for="name">Name:</label>
+        <label for="name">Name: <span class="required">*</span></label>
         <input type="text" name="name" required> <br>
+        <label for="city">City</label><span class="required">*</span> <br>
+        <input type="text">
 
         <ol>
-            <li>What is your age?</li>
-            <input type="radio" name="age" value="Below 45"> Below 45 <br>
+            <li>What is your age?<span class="required">*</span></li>
+            <input type="radio" name="age" value="Below 45" required> Below 45 <br>
             <input type="radio" name="age" value="45-60"> 45-60 <br>
             <input type="radio" name="age" value="60-70"> 60-70 <br>
-            <input type="radio" name="age" value="71-80"> 71-80 <br>
-            <input type="radio" name="age" value="80 or above"> 80 or above <br>
+            <input type="radio" name="age" value="71-80"> 71-80 & Above<br>
 
-            <li>How often would you be interested in participating in recreational activities at the club?</li>
-            <input type="radio" name="interest" value="Daily"> Daily <br>
+            <li>What are your retirement plans?<span class="required">*</span></li>
+            <input type="text" name="plans"value="text" required> <br>
+
+            <li>Do you wish to continue your hobby that were left behind in hustle life?<span class="required">*</span></li>
+            <input type="radio" name="sessionLength"  required> Yes <br>
+            <input type="radio" name="sessionLength"> No <br>
+            <input type="radio" name="sessionLength"> Maybe <br>
+
+            <li>How often would you be interested in participating in recreational activities at the club? <span class="required">*</span></li>
+            <input type="radio" name="interest" value="Daily" required> Daily <br>
             <input type="radio" name="interest" value="Weekly"> Weekly <br>
             <input type="radio" name="interest" value="Monthly"> Monthly <br>
             <input type="radio" name="interest" value="Occasionally"> Occasionally <br>
             <input type="radio" name="interest" value="Not interested"> Not interested <br>
 
-            <li>What types of recreational activities would you like to see offered at the club? (Check all that apply)</li>
-            <input type="checkbox" name="activities" value="Exercise classes"> Exercise classes (e.g. yoga) <br>
+            <li>What types of recreational activities would you like to see or offered at the club? (Check all that apply)<span class="required">*</span></li>
+            <input type="checkbox" name="activities" value="Exercise classes" required> Exercise classes (e.g. yoga) <br>
             <input type="checkbox" name="activities" value="Arts and crafts"> Arts and crafts <br>
             <input type="checkbox" name="activities" value="Gardening"> Gardening <br>
             <input type="checkbox" name="activities" value="Cooking classes"> Cooking classes <br>
@@ -50,16 +69,21 @@ crossorigin="anonymous"></script>
             <input type="text" id="otherActivities">
             <br>
 
-            <li>What time of day would you prefer activities to be scheduled? (Check all that apply)</li>
-            <input type="checkbox" name="timeOfDay" value="Morning"> Morning <br>
-            <input type="checkbox" name="timeOfDay" value="Afternoon"> Afternoon <br>
-            <input type="checkbox" name="timeOfDay" value="Evening"> Evening <br>
+            <li>Do you encourage the creation of recreational club for social environment?<span class="required">*</span></li> <br>
+            <input type="radio" name="sessionLength"  required> Yes <br>
+            <input type="radio" name="sessionLength"> No <br>
+            <input type="radio" name="sessionLength"> Maybe <br>
 
-            <li>How long would you prefer each recreational activity session to last?</li>
-            <input type="radio" name="sessionLength" value="Less than 1 hour"> Less than 1 hour <br>
-            <input type="radio" name="sessionLength" value="1-2 hours"> 1-2 hours <br>
-            <input type="radio" name="sessionLength" value="2-3 hours"> 2-3 hours <br>
-            <input type="radio" name="sessionLength" value="More than 3 hours"> More than 3 hours <br>
+            <li>What do you think about replacing an <b>"Old Age Home"</b> to <b>"Recreational Club"</b> to overcome the lonliness in senior citizens?<span class="required">*</span></li> <br>
+            <input type="text" name="lonliness" required> <br>
+
+            <li>Do you think it will become a platform for having an intergenerational space in the society?</li> <br>
+            <input type="radio" name="platform"> Yes <br>
+            <input type="radio" name="platform"> No <br>
+            
+            <li>Do you think this will be helpful to change the scenario of society and change in living life of senior citizens during their retirement period?</li>
+            <input type="radio" name="change" id=""> Yes <br>
+            <input type="radio" name="change" id=""> No <br>
         </ol>
         <button onclick="SubForm()">Submit</button>
     </form>
